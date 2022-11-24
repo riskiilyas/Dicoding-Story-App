@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace 'com.keecoding.storyapp'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.keecoding.storyapp"
-        minSdk 23
-        targetSdk 32
+        minSdk 26
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

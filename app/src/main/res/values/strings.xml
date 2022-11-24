@@ -5,4 +5,10 @@
     <string name="livestory_app">LiveStory App</string>
     <string name="by_keecoding">by KeeCoding</string>
     <string name="sign_in">Sign In</string>
+    <string name="login">Login</string>
+    <string name="email">Email:</string>
+    <string name="example_email_com">example@email.com</string>
+    <string name="password">password</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
