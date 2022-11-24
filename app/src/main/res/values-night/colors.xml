@@ -7,4 +7,6 @@
     <color name="button_col1">#3422A3</color>
     <color name="default_text">#9A95B5</color>
     <color name="button_text">#D4CDFF</color>
+    <color name="search_bg">#3E337C</color>
+
 </resources>
