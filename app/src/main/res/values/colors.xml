@@ -7,10 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="app_col">#5A40FF</color>
     <color name="app_col2">#16009E</color>
     <color name="background">#F7F7FF</color>
+    <color name="cardbackground">#F1F1FF</color>
     <color name="title_col">#FEF2FF</color>
     <color name="text_col">#170019</color>
     <color name="button_col1">#16009E</color>
@@ -19,5 +19,6 @@
     <color name="default_text">#4A4858</color>
     <color name="button_text">#16009E</color>
     <color name="fav_color">#FF008C</color>
+    <color name="fav_color2">#FB73BD</color>
     <color name="search_bg">#E1E1EF</color>
 </resources>

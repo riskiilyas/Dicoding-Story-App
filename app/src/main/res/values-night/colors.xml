@@ -3,6 +3,7 @@
     <color name="app_col">#000213</color>
     <color name="app_col2">#02072F</color>
     <color name="background">#17132E</color>
+    <color name="cardbackground">#282053</color>
     <color name="text_col">#FFECF2</color>
     <color name="button_col1">#3422A3</color>
     <color name="default_text">#9A95B5</color>
