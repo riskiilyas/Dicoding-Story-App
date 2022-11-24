@@ -15,4 +15,7 @@
     <string name="more">More</string>
     <string name="home_page">Home Page</string>
     <string name="story">Story</string>
+    <string name="your_name">Your name</string>
+    <string name="name">Name</string>
+    <string name="already_have_account">Already have account?</string>
 </resources>
