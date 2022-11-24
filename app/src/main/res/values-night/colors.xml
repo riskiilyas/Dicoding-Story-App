@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_col">#001300</color>
+    <color name="background">#97000500</color>
+    <color name="text_col">#FFECF2</color>
+</resources>
