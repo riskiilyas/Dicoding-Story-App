@@ -8,11 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="app_col">#49BE95</color>
-    <color name="background">#FEF2FF</color>
+    <color name="app_col">#5A40FF</color>
+    <color name="app_col2">#16009E</color>
+    <color name="background">#F8F7FF</color>
     <color name="title_col">#FEF2FF</color>
     <color name="text_col">#170019</color>
-    <color name="button_col1">#003E57</color>
+    <color name="button_col1">#16009E</color>
     <color name="button_col2">#A80000</color>
     <color name="transparent">#00000000</color>
+    <color name="default_text">#222128</color>
 </resources>

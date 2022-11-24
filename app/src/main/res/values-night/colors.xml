@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="app_col">#001300</color>
-    <color name="background">#97000500</color>
+    <color name="app_col">#000213</color>
+    <color name="app_col2">#02072F</color>
+    <color name="background">#17132E</color>
     <color name="text_col">#FFECF2</color>
+    <color name="button_col1">#3422A3</color>
+    <color name="default_text">#656278</color>
 </resources>
