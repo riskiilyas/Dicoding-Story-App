@@ -25,4 +25,6 @@
     <string name="camera">Camera</string>
     <string name="upload">Upload</string>
     <string name="your_description_here">Your description here...</string>
+    <string name="delete_all">Delete All</string>
+    <string name="sort">Sort</string>
 </resources>
