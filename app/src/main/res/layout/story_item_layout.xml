@@ -23,27 +23,16 @@
             android:background="@color/cardbackground"
             android:padding="8dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/materialCardView"
+            <ImageView
+                android:id="@+id/ivStoryPic"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:elevation="0dp"
-                app:cardCornerRadius="20dp"
+                android:contentDescription="@string/story"
+                android:src="@drawable/placeholder"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline15"
                 app:layout_constraintStart_toStartOf="parent"
-                app:cardBackgroundColor="@color/cardbackground"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5">
-
-                <ImageView
-                    android:id="@+id/ivStoryPic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/placeholder"
-                    android:contentDescription="@string/story" />
-            </com.google.android.material.card.MaterialCardView>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvName"

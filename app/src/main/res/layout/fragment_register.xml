@@ -18,6 +18,16 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/sign_up" />
 
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_col" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"

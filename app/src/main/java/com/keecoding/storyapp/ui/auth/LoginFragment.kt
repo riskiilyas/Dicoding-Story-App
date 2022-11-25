@@ -33,7 +33,7 @@ class LoginFragment : BaseFragment() {
 
 
 
-            btnRegister.setOnClickListener {
+            tvSignUp.setOnClickListener {
                 navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
             }
         }

@@ -9,7 +9,7 @@
     <string name="email">Email:</string>
     <string name="example_email_com">example@email.com</string>
     <string name="password">password</string>
-    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="don_t_have_account">Didn\'t have account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="favorites">Favorites</string>
     <string name="more">More</string>
@@ -18,4 +18,11 @@
     <string name="your_name">Your name</string>
     <string name="name">Name</string>
     <string name="already_have_account">Already have account?</string>
+    <string name="add_story">Add Story</string>
+    <string name="back">Back</string>
+    <string name="exit">Exit</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
+    <string name="your_description_here">Your description here...</string>
 </resources>

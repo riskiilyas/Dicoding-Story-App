@@ -40,23 +40,38 @@
         android:layout_width="40dp"
         android:layout_height="0dp"
         android:layout_marginEnd="4dp"
+        android:background="?selectableItemBackgroundBorderless"
         android:contentDescription="@string/favorites"
         android:src="@drawable/ic_baseline_favorite_border_24"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/btnMore"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/default_text"/>
+        app:tint="@color/text_col" />
+
+    <ImageView
+        android:id="@+id/btnAddStory"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/btnFav"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/add_story"
+        app:tint="@color/text_col" />
 
     <ImageView
         android:id="@+id/btnMore"
         android:layout_width="40dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/more"
+        android:background="?selectableItemBackgroundBorderless"
         android:src="@drawable/ic_baseline_more_vert_24"
         app:layout_constraintBottom_toBottomOf="@+id/btnFav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/default_text"
-        android:contentDescription="@string/more" />
+        app:tint="@color/text_col" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvStories"
