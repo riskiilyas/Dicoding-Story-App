@@ -9,5 +9,5 @@
     <color name="default_text">#9A95B5</color>
     <color name="button_text">#D4CDFF</color>
     <color name="search_bg">#3E337C</color>
-
+    <color name="switch_col">@color/teal_200</color>
 </resources>

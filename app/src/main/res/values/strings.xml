@@ -24,7 +24,13 @@
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="upload">Upload</string>
-    <string name="your_description_here">Your description here...</string>
+    <string name="your_description_here">Your description here…</string>
     <string name="delete_all">Delete All</string>
     <string name="sort">Sort</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="created_by_riski_ilyas">Created By Riski Ilyas\nwww.riskiilyas.com</string>
+    <string name="languange">Languange</string>
+    <string name="logout">Logout</string>
+    <string name="contact_developer">Contact Developer</string>
 </resources>

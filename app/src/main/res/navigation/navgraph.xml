@@ -83,12 +83,7 @@
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
-            android:id="@+id/action_settingsFragment_to_languangeFragment"
-            app:destination="@id/languangeFragment" />
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/languangeFragment"
-        android:name="com.keecoding.storyapp.ui.settings.lang.LanguangeFragment"
-        android:label="fragment_languange"
-        tools:layout="@layout/fragment_languange" />
 </navigation>

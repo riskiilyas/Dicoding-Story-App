@@ -21,4 +21,5 @@
     <color name="fav_color">#FF008C</color>
     <color name="fav_color2">#FB73BD</color>
     <color name="search_bg">#E1E1EF</color>
+    <color name="switch_col">#5A40FF</color>
 </resources>
