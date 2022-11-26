@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/appCompatSpinner"
+        android:id="@+id/spinnerLanguange"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/switch_col"
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/switch_col"
@@ -126,6 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <ImageButton
+        android:id="@+id/btnContactDev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/switch_col"

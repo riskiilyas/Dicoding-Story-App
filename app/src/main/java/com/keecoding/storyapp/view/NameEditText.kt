@@ -17,10 +17,10 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.keecoding.storyapp.R
 
-class PasswordEditText: AppCompatEditText, View.OnTouchListener {
+class NameEditText: AppCompatEditText, View.OnTouchListener {
 
     private lateinit var clearButtonImage: Drawable
-    private lateinit var passwordIcon: Drawable
+    private lateinit var nameIcon: Drawable
     private var paint = Paint()
 
     constructor(context: Context) : super(context) {
@@ -40,9 +40,9 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
 //        clearButtonImage.setTint(ContextCompat.getColor(context, R.color.default_text))
         paint.style = Paint.Style.STROKE
         paint.color = ContextCompat.getColor(context, R.color.default_text)
-        passwordIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_lock_24) as Drawable
-        passwordIcon.setTint(ContextCompat.getColor(context, R.color.default_text))
-        inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+        nameIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_person_24) as Drawable
+        nameIcon.setTint(ContextCompat.getColor(context, R.color.default_text))
+        inputType = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
 
         setOnTouchListener(this)
 
@@ -61,11 +61,11 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        hint = resources.getString(R.string.password)
+        hint = resources.getString(R.string.your_name)
 //        canvas.drawRoundRect(0F, 0F, x, y, 16F, 16F, paint)
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
         background = ContextCompat.getDrawable(context, R.drawable.password_et)
-        setButtonDrawables(startOfTheText = passwordIcon)
+        setButtonDrawables(startOfTheText = nameIcon)
 //        setButtonDrawables(endOfTheText = clearButtonImage)
     }
 

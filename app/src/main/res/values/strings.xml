@@ -6,9 +6,9 @@
     <string name="by_keecoding">by KeeCoding</string>
     <string name="sign_in">Sign In</string>
     <string name="login">Login</string>
-    <string name="email">Email:</string>
+    <string name="email">Email</string>
     <string name="example_email_com">example@email.com</string>
-    <string name="password">password</string>
+    <string name="password">Password</string>
     <string name="don_t_have_account">Didn\'t have account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="favorites">Favorites</string>
@@ -33,4 +33,5 @@
     <string name="languange">Languange</string>
     <string name="logout">Logout</string>
     <string name="contact_developer">Contact Developer</string>
+    <string name="must_be_at_least_6_characters">Password must be at least 6 characters</string>
 </resources>

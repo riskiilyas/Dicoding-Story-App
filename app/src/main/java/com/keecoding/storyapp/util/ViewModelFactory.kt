@@ -38,8 +38,6 @@ class ViewModelFactory(private val activity: MainActivity) : ViewModelProvider.N
             return FavoriteViewModel(activity) as T
         } else if (modelClass.isAssignableFrom(ListStoryViewModel::class.java)) {
             return ListStoryViewModel(activity) as T
-        } else if(modelClass.isAssignableFrom(SplashViewModel::class.java)) {
-            return SplashViewModel(activity) as T
         }else if (modelClass.isAssignableFrom(SharedViewModel::class.java)) {
             return SharedViewModel(activity.application) as T
         }
