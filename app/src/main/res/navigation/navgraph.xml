@@ -51,10 +51,12 @@
         tools:layout="@layout/fragment_splash" >
         <action
             app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"
             android:id="@+id/action_splashFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
             app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"
             android:id="@+id/action_splashFragment_to_listStoryFragment"
             app:destination="@id/listStoryFragment" />
     </fragment>

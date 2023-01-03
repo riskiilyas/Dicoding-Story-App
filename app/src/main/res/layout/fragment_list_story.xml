@@ -14,6 +14,7 @@
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:background="@drawable/search_view_style"
         app:layout_constraintBottom_toTopOf="@+id/rvStories"
         app:layout_constraintEnd_toEndOf="parent"

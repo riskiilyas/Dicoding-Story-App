@@ -36,7 +36,7 @@ class SplashFragment : BaseFragment() {
         lifecycleScope.launchWhenCreated {
             delay(1500)
             sharedViewModel.name.observe(viewLifecycleOwner) {
-                if (it == null) {
+                if (it.isNullOrBlank()) {
                     navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
                 } else {
                     navigate(SplashFragmentDirections.actionSplashFragmentToListStoryFragment())

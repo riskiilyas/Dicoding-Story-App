@@ -48,7 +48,7 @@ class EmailEditText: AppCompatEditText, View.OnTouchListener {
                 setHint(R.string.password)
             }
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 6) error = resources.getString(R.string.must_be_at_least_6_characters)
+                if (s.toString().length < 8) error = resources.getString(R.string.must_be_at_least_6_characters)
             }
             override fun afterTextChanged(s: Editable) {
                 // Do nothing.

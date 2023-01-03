@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Story App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="livestory_app">LiveStory App</string>
+    <string name="by_keecoding">oleh KeeCoding</string>
+    <string name="sign_in">Masuk</string>
+    <string name="login">Masuk</string>
+    <string name="email">Email</string>
+    <string name="example_email_com">contoh@email.com</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_account">Tidak Punya Akun?</string>
+    <string name="sign_up">Daftar</string>
+    <string name="favorites">Favorit</string>
+    <string name="more">Lebih</string>
+    <string name="home_page">Halaman Utama</string>
+    <string name="story">Cerita</string>
+    <string name="your_name">Nama Anda</string>
+    <string name="name">Nama</string>
+    <string name="already_have_account">Sudah Punya Akun?</string>
+    <string name="add_story">Tambahkan Cerita</string>
+    <string name="back">Kembali</string>
+    <string name="exit">Keluar</string>
+    <string name="gallery">Galeri</string>
+    <string name="camera">Kamera</string>
+    <string name="upload">Unggah</string>
+    <string name="your_description_here">Masukkan Deskripsi anda disini…</string>
+    <string name="delete_all">Hapus Semua</string>
+    <string name="sort">Urutkan</string>
+    <string name="settings">Pengaturan</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="created_by_riski_ilyas">Dibuat oleh Riski Ilyas\nwww.riskiilyas.com</string>
+    <string name="languange">Bahasa</string>
+    <string name="logout">Keluar Akun</string>
+    <string name="contact_developer">Kontak Pengembang</string>
+    <string name="must_be_at_least_6_characters">Sandi harus minimal 8 karakter!</string>
+</resources>
