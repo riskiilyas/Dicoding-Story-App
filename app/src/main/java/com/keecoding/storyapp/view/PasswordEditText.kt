@@ -22,6 +22,7 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
     private lateinit var clearButtonImage: Drawable
     private lateinit var passwordIcon: Drawable
     private var paint = Paint()
+    var isReady = false
 
     constructor(context: Context) : super(context) {
         init()
@@ -36,13 +37,14 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
     }
 
     private fun init() {
-//        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
-//        clearButtonImage.setTint(ContextCompat.getColor(context, R.color.default_text))
+        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
+        clearButtonImage.setTint(ContextCompat.getColor(context, R.color.default_text))
         paint.style = Paint.Style.STROKE
         paint.color = ContextCompat.getColor(context, R.color.default_text)
         passwordIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_lock_24) as Drawable
         passwordIcon.setTint(ContextCompat.getColor(context, R.color.default_text))
         inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+        compoundDrawablePadding = 16
 
         setOnTouchListener(this)
 
@@ -51,7 +53,11 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
                 setHint(R.string.password)
             }
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 6) error = resources.getString(R.string.must_be_at_least_6_characters)
+                if (s.toString().length < 6) {
+                    error = resources.getString(R.string.must_be_at_least_6_characters)
+                    isReady = false
+                }
+                else isReady = true
             }
             override fun afterTextChanged(s: Editable) {
                 // Do nothing.
@@ -65,8 +71,7 @@ class PasswordEditText: AppCompatEditText, View.OnTouchListener {
 //        canvas.drawRoundRect(0F, 0F, x, y, 16F, 16F, paint)
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
         background = ContextCompat.getDrawable(context, R.drawable.password_et)
-        setButtonDrawables(startOfTheText = passwordIcon)
-//        setButtonDrawables(endOfTheText = clearButtonImage)
+        setButtonDrawables(startOfTheText = passwordIcon, endOfTheText = clearButtonImage)
     }
 
     override fun onTouch(v: View?, event: MotionEvent): Boolean {

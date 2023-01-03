@@ -31,7 +31,9 @@ class LoginFragment : BaseFragment() {
 
         binding.apply {
 
-
+            btnExit.setOnClickListener {
+                requireActivity().finish()
+            }
 
             tvSignUp.setOnClickListener {
                 navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())

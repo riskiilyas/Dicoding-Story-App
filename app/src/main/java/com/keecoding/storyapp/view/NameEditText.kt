@@ -17,11 +17,12 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.keecoding.storyapp.R
 
-class NameEditText: AppCompatEditText, View.OnTouchListener {
+class NameEditText: AppCompatEditText {
 
     private lateinit var clearButtonImage: Drawable
     private lateinit var nameIcon: Drawable
     private var paint = Paint()
+    var isReady = false
 
     constructor(context: Context) : super(context) {
         init()
@@ -43,15 +44,20 @@ class NameEditText: AppCompatEditText, View.OnTouchListener {
         nameIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_person_24) as Drawable
         nameIcon.setTint(ContextCompat.getColor(context, R.color.default_text))
         inputType = InputType.TYPE_TEXT_VARIATION_PERSON_NAME
-
-        setOnTouchListener(this)
+        compoundDrawablePadding = 16
 
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                setHint(R.string.password)
+                setHint(R.string.name)
             }
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 6) error = resources.getString(R.string.must_be_at_least_6_characters)
+                if (s.isEmpty()) {
+                    isReady = false
+                    error = resources.getString(R.string.name_is_empty)
+                } else {
+                    isReady = true
+                }
+                isReady = s.isNotEmpty()
             }
             override fun afterTextChanged(s: Editable) {
                 // Do nothing.
@@ -67,51 +73,6 @@ class NameEditText: AppCompatEditText, View.OnTouchListener {
         background = ContextCompat.getDrawable(context, R.drawable.password_et)
         setButtonDrawables(startOfTheText = nameIcon)
 //        setButtonDrawables(endOfTheText = clearButtonImage)
-    }
-
-    override fun onTouch(v: View?, event: MotionEvent): Boolean {
-        if (compoundDrawables[2] != null) {
-            val clearButtonStart: Float
-            val clearButtonEnd: Float
-            var isClearButtonClicked = false
-            if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
-                clearButtonEnd = (clearButtonImage.intrinsicWidth + paddingStart).toFloat()
-                when {
-                    event.x < clearButtonEnd -> isClearButtonClicked = true
-                }
-            } else {
-                clearButtonStart = (width - paddingEnd - clearButtonImage.intrinsicWidth).toFloat()
-                when {
-                    event.x > clearButtonStart -> isClearButtonClicked = true
-                }
-            }
-            if (isClearButtonClicked) {
-                when (event.action) {
-                    MotionEvent.ACTION_DOWN -> {
-                        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
-                        showClearButton()
-                        return true
-                    }
-                    MotionEvent.ACTION_UP -> {
-                        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
-                        when {
-                            text != null -> text?.clear()
-                        }
-                        hideClearButton()
-                        return true
-                    }
-                    else -> return false
-                }
-            } else return false
-        }
-        return false
-    }
-
-    private fun showClearButton() {
-        setButtonDrawables(endOfTheText = clearButtonImage)
-    }
-    private fun hideClearButton() {
-        setButtonDrawables()
     }
 
     private fun setButtonDrawables(

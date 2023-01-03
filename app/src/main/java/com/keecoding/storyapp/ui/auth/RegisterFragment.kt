@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.keecoding.storyapp.R
 import com.keecoding.storyapp.databinding.FragmentRegisterBinding
 import com.keecoding.storyapp.ui.BaseFragment
@@ -28,6 +30,20 @@ class RegisterFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.apply {
+            btnBack.setOnClickListener {
+                findNavController().popBackStack()
+            }
+
+            btnRegis.setOnClickListener {
+                if (etEmail.isReady && etName.isReady && etPassword.isReady) {
+                    Toast.makeText(requireContext(), "Bisaaa", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(), "Nggak", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
 
         viewModel = getViewModel(AuthViewModel::class.java)
 

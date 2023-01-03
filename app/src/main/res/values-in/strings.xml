@@ -19,6 +19,8 @@
     <string name="name">Nama</string>
     <string name="already_have_account">Sudah Punya Akun?</string>
     <string name="add_story">Tambahkan Cerita</string>
+    <string name="email_is_invalid">Email Tidak Valid</string>
+    <string name="name_is_empty">Nama Harus Diisi</string>
     <string name="back">Kembali</string>
     <string name="exit">Keluar</string>
     <string name="gallery">Galeri</string>

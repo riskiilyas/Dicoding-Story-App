@@ -9,6 +9,7 @@ import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.util.Patterns
 import android.view.MotionEvent
 import android.view.View
 import android.widget.EditText
@@ -17,10 +18,11 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.keecoding.storyapp.R
 
-class EmailEditText: AppCompatEditText, View.OnTouchListener {
+class EmailEditText: AppCompatEditText {
 
     private lateinit var clearButtonImage: Drawable
     private lateinit var emailIcon: Drawable
+    var isReady = false
 
     constructor(context: Context) : super(context) {
         init()
@@ -40,15 +42,20 @@ class EmailEditText: AppCompatEditText, View.OnTouchListener {
         emailIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_email_24) as Drawable
         emailIcon.setTint(ContextCompat.getColor(context, R.color.default_text))
         inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
+        compoundDrawablePadding = 16
 
-        setOnTouchListener(this)
 
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                setHint(R.string.password)
+                setHint(R.string.email)
             }
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.toString().length < 8) error = resources.getString(R.string.must_be_at_least_6_characters)
+                if(s.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(s).matches()) {
+                  isReady = true
+                } else {
+                    isReady = false
+                    error = resources.getString(R.string.email_is_invalid)
+                }
             }
             override fun afterTextChanged(s: Editable) {
                 // Do nothing.
@@ -63,51 +70,6 @@ class EmailEditText: AppCompatEditText, View.OnTouchListener {
         background = ContextCompat.getDrawable(context, R.drawable.password_et)
         setButtonDrawables(startOfTheText = emailIcon)
 //        setButtonDrawables(endOfTheText = clearButtonImage)
-    }
-
-    override fun onTouch(v: View?, event: MotionEvent): Boolean {
-        if (compoundDrawables[2] != null) {
-            val clearButtonStart: Float
-            val clearButtonEnd: Float
-            var isClearButtonClicked = false
-            if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
-                clearButtonEnd = (clearButtonImage.intrinsicWidth + paddingStart).toFloat()
-                when {
-                    event.x < clearButtonEnd -> isClearButtonClicked = true
-                }
-            } else {
-                clearButtonStart = (width - paddingEnd - clearButtonImage.intrinsicWidth).toFloat()
-                when {
-                    event.x > clearButtonStart -> isClearButtonClicked = true
-                }
-            }
-            if (isClearButtonClicked) {
-                when (event.action) {
-                    MotionEvent.ACTION_DOWN -> {
-                        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
-                        showClearButton()
-                        return true
-                    }
-                    MotionEvent.ACTION_UP -> {
-                        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
-                        when {
-                            text != null -> text?.clear()
-                        }
-                        hideClearButton()
-                        return true
-                    }
-                    else -> return false
-                }
-            } else return false
-        }
-        return false
-    }
-
-    private fun showClearButton() {
-        setButtonDrawables(endOfTheText = clearButtonImage)
-    }
-    private fun hideClearButton() {
-        setButtonDrawables()
     }
 
     private fun setButtonDrawables(
