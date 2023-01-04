@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.keecoding.storyapp.R
 import com.keecoding.storyapp.databinding.FragmentLoginBinding
 import com.keecoding.storyapp.ui.BaseFragment
 import com.keecoding.storyapp.util.Resource
@@ -38,6 +40,14 @@ class LoginFragment : BaseFragment() {
             tvSignUp.setOnClickListener {
                 navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
             }
+
+            btnRegis.setOnClickListener {
+                if (etEmail.isReady && etPassword.isReady) {
+                    viewModel.login(etEmail.text.toString(), etPassword.text.toString())
+                } else {
+                    Toast.makeText(requireContext(), resources.getText(R.string.name_is_empty), Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
         viewModel.loginResult.observe(viewLifecycleOwner) {
@@ -54,6 +64,7 @@ class LoginFragment : BaseFragment() {
 
                 is Resource.SUCCESS -> {
                     closeProgressDialog()
+                    Toast.makeText(requireContext(), "Welcome ${it.result.name}!", Toast.LENGTH_SHORT).show()
                     navigate(LoginFragmentDirections.actionLoginFragmentToListStoryFragment())
                 }
                 else -> {}

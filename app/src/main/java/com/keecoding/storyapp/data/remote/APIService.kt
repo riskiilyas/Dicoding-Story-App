@@ -13,20 +13,20 @@ import retrofit2.http.*
 
 interface APIService {
 
-    @POST("/register")
+    @POST("register")
     fun registerUser(@Body body: RegisterBody): Call<RegisterResponse>
 
-    @POST("/login")
+    @POST("login")
     fun loginUser(@Body body: LoginBody): Call<LoginResponse>
 
     @Headers("Content-Type: multipart/form-data")
-    @POST("/stories")
+    @POST("stories")
     fun postStory(
         @Part file: MultipartBody.Part,
         @Part("description") desc: RequestBody,
         @Header("Authorization") token: String
     ): Call<PostStoryResponse>
 
-    @GET("/stories")
+    @GET("stories")
     fun getAllStories(@Header("Authorization") token: String): Call<ListStoriesResponse>
 }

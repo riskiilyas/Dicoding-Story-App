@@ -38,9 +38,9 @@ class RegisterFragment : BaseFragment() {
 
             btnRegis.setOnClickListener {
                 if (etEmail.isReady && etName.isReady && etPassword.isReady) {
-                    Toast.makeText(requireContext(), "Bisaaa", Toast.LENGTH_SHORT).show()
+                    viewModel.register(etName.text.toString(), etEmail.text.toString(), etPassword.text.toString())
                 } else {
-                    Toast.makeText(requireContext(), "Nggak", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "NGGak Bisaa!", Toast.LENGTH_SHORT).show()
                 }
             }
         }

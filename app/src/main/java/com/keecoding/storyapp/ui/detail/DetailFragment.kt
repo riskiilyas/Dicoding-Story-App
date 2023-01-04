@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.keecoding.storyapp.adapter.StoryAdapter
 import com.keecoding.storyapp.databinding.FragmentDetailBinding
 import com.keecoding.storyapp.ui.BaseFragment
 
@@ -28,6 +29,10 @@ class DetailFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = getViewModel(DetailViewModel::class.java)
+
+        binding.apply {
+            val adapter = StoryAdapter()
+        }
     }
 
     override fun setupArguments(arguments: Bundle?) {
